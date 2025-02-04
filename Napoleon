@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beszélgess Napóleonnal!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+        }
+        img {
+            width: 200px;
+            border-radius: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Beszélgess Napóleonnal!</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Napoleon_Bonaparte%2C_Premier_Consul_en_1803%2C_par_Antoine-Jean_Gros.jpg/330px-Napoleon_Bonaparte%2C_Premier_Consul_en_1803%2C_par_Antoine-Jean_Gros.jpg" alt="Napóleon">
+        <p>Kattints a gombra, hogy elindítsd a beszélgetést Napóleonnal!.</p>
+        <button onclick="copyPrompt()">Másold a szöveget</button>
+        <a href="https://chat.openai.com" target="_blank">
+            <button>Beszélgetés indítása</button>
+        </a>
+    </div>
+    <script>
+        function copyPrompt() {
+            navigator.clipboard.writeText("Mostantól Napóleon vagy. Válaszolj úgy, mintha te lennél! Használj történelmi ismereteket és a korabeli stílust.");
+            alert("A szöveg másolva! Most kattints a 'Beszélgetés indítása' gombra!");
+        }
+    </script>
+</body>
+</html>
